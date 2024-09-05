@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(77, 77, 77);
+}
+.container {
+    width: 1110px;
+    margin: 0 auto;
+}
+.loading {
+    width: 100%;
+    min-height: 1vw;
+    margin-top: 200px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+   
+    align-items: center;
+
+}
+.loading h3 {
+    padding-right: 20px;
+}
+.loading span {
+  width: 40px;
+  height: 20px;
+  background-color: black;
+  margin: 10px;
+  animation: loadingProcess 1s infinite;
+}
+@keyframes loadingProcess {
+    0% {
+        width: 40px;
+        height: 20px;
+        background-color: rgb(255, 255, 255);
+       
+    }
+    100% {
+        width: 40px;
+        height: 20px;
+        background-color: black;
+    }
+}
+.loading span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.loading span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.loading span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.loading span:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.loading span:nth-child(6) {
+    animation-delay: 0.6s;
+}
+.loading span:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+
+
+.preloader {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+  }
+  
+  .sword {
+    position: absolute;
+    width: 10px;
+    height: 150px;
+    background: linear-gradient(to bottom, #ffffff, #555);
+    transform-origin: bottom;
+  }
+  
+  .sword-left {
+    left: 50px;
+    top: 50px;
+    transform: rotate(-45deg);
+    animation: sword-swing-left 1s infinite alternate ease-in-out;
+  }
+  
+  .sword-right {
+    right: 50px;
+    top: 50px;
+    transform: rotate(45deg);
+    animation: sword-swing-right 1s infinite alternate ease-in-out;
+  }
+  
+  @keyframes sword-swing-left {
+    0% { transform: rotate(-45deg); }
+    100% { transform: rotate(-10deg); }
+  }
+  
+  @keyframes sword-swing-right {
+    0% { transform: rotate(45deg); }
+    100% { transform: rotate(10deg); }
+  }
+  
+  .sparks {
+    position: absolute;
+    top: 80px;
+    left: 95px;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, yellow, orange, red);
+    border-radius: 50%;
+    animation: spark-animation 0.5s infinite;
+    opacity: 0;
+  }
+  
+  @keyframes spark-animation {
+    0% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1.5); }
+    100% { opacity: 0; transform: scale(0); }
+  }
